@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 
+// related to rc window defination
 #include "resource.h"
 
 #include "aboutdlg.h"
@@ -31,6 +32,7 @@ int Run(LPTSTR /*lpstrCmdLine*/ = NULL, int nCmdShow = SW_SHOWDEFAULT)
 	return nRet;
 }
 
+// main function is here
 int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPTSTR lpstrCmdLine, int nCmdShow)
 {
 	HRESULT hRes = ::CoInitialize(NULL);

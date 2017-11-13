@@ -58,30 +58,39 @@ IDR_MAINFRAME           ICON                    "res\\hello1.ico"
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOGEX 0, 0, 187, 102
+IDD_ABOUTBOX DIALOGEX 0, 0, 252, 103
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    DEFPUSHBUTTON   "OK",IDOK,195,82,50,14
     CTEXT           "hello1 Application v1.0\n\n(c) Copyright 2017",IDC_STATIC,25,57,78,32
     ICON            IDR_MAINFRAME,IDC_STATIC,55,26,20,20
-    GROUPBOX        "",IDC_STATIC,7,7,115,88
-    PUSHBUTTON      "按钮消息",btn_new_message,130,23,50,14
+    GROUPBOX        "",IDC_STATIC,7,7,115,89
+    PUSHBUTTON      "按钮消息_edit_txtxx",btn_about_message1,168,23,77,14
 END
 
-IDD_MAINDLG DIALOGEX 0, 0, 187, 98
+IDD_MAINDLG DIALOGEX 0, 0, 410, 148
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
 CAPTION "你好世界"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    DEFPUSHBUTTON   "OK",IDOK,130,7,50,14
-    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
-    PUSHBUTTON      "&About",ID_APP_ABOUT,130,77,50,14
-    PUSHBUTTON      "新对话窗口",btn_new_dialog,53,77,50,14
+    DEFPUSHBUTTON   "OK",MainOK,353,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,353,24,50,14
+    PUSHBUTTON      "&About",ID_APP_ABOUT,353,127,50,14
+    PUSHBUTTON      "新对话窗口_带命令行",btn_new_message,318,73,85,14
+    PUSHBUTTON      "双击弹窗无法做到",btn_double_click,322,44,81,14
+    EDITTEXT        tbox_input_output,62,48,152,14,ES_AUTOHSCROLL
+    EDITTEXT        tbox_ip,61,71,153,14,ES_AUTOHSCROLL
+    LTEXT           "输入输出",label_input_output,23,52,33,8
+    LTEXT           "IP地址",IDC_STATIC,23,73,24,8
+    CONTROL         "是否服务器(y服务器)",cbox_server_or_client,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,60,26,89,10
+    LTEXT           "端口",IDC_STATIC,25,94,17,8
+    EDITTEXT        tbox_ip_port,61,90,153,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "启动",btn_start_server,69,115,50,14
 END
 
-IDD_NEW_DIALOG DIALOGEX 0, 0, 316, 185
+IDD_MY_DIALOG1 DIALOGEX 0, 0, 316, 185
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
@@ -102,20 +111,20 @@ BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 180
+        RIGHTMARGIN, 245
         TOPMARGIN, 7
-        BOTTOMMARGIN, 95
+        BOTTOMMARGIN, 96
     END
 
     IDD_MAINDLG, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 180
+        RIGHTMARGIN, 403
         TOPMARGIN, 7
-        BOTTOMMARGIN, 91
+        BOTTOMMARGIN, 141
     END
 
-    IDD_NEW_DIALOG, DIALOG
+    IDD_MY_DIALOG1, DIALOG
     BEGIN
         LEFTMARGIN, 7
         RIGHTMARGIN, 309
